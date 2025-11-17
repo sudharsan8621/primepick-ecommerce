@@ -1,0 +1,45 @@
+<svg viewBox="0 0 1920 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="dots2" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+      <circle cx="25" cy="25" r="2" fill="white" opacity="0.2" />
+    </pattern>
+  </defs>
+  
+  <rect width="1920" height="600" fill="url(#gradient2)" />
+  <rect width="1920" height="600" fill="url(#dots2)" />
+  
+  <g transform="translate(0, 0)">
+    <path d="M0,300 Q480,200 960,300 T1920,300 L1920,600 L0,600 Z" fill="white" opacity="0.1" />
+    <path d="M0,350 Q480,250 960,350 T1920,350 L1920,600 L0,600 Z" fill="white" opacity="0.1" />
+  </g>
+  
+  <text x="960" y="200" text-anchor="middle" fill="white" font-size="35" font-weight="300" letter-spacing="5" font-family="Arial, sans-serif">
+    TRENDING NOW
+  </text>
+  <text x="960" y="280" text-anchor="middle" fill="white" font-size="75" font-weight="bold" font-family="Arial, sans-serif">
+    NEW COLLECTION 2024
+  </text>
+  <text x="960" y="360" text-anchor="middle" fill="white" font-size="40" font-weight="300" font-family="Arial, sans-serif">
+    Fresh Arrivals Every Day
+  </text>
+  
+  <g transform="translate(300, 100)" opacity="0.2">
+    <polygon points="0,0 50,0 25,43" fill="white" />
+  </g>
+  <g transform="translate(1500, 150)" opacity="0.2">
+    <polygon points="0,0 60,0 30,52" fill="white" />
+  </g>
+  <g transform="translate(200, 400)" opacity="0.2">
+    <rect x="0" y="0" width="60" height="60" fill="white" transform="rotate(45 30 30)" />
+  </g>
+  <g transform="translate(1600, 400)" opacity="0.2">
+    <rect x="0" y="0" width="50" height="50" fill="white" transform="rotate(45 25 25)" />
+  </g>
+  
+  <circle cx="150" cy="500" r="40" fill="white" opacity="0.1" />
+  <circle cx="1800" cy="100" r="35" fill="white" opacity="0.1" />
+</svg>
