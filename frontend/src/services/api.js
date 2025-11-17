@@ -1,13 +1,14 @@
 import axios from 'axios'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000'
+const API_URL = import.meta.env.VITE_API_URL || 'https://primepick-ecommerce-2.onrender.com/'
 
 const api = axios.create({
   baseURL: API_URL,
   headers: {
     'Content-Type': 'application/json'
   },
-  timeout: 10000 // 10 seconds timeout
+  withCredentials: true,
+  timeout: 30000 // 30 seconds (for Render cold starts)
 })
 
 api.interceptors.request.use(
@@ -32,10 +33,12 @@ api.interceptors.response.use(
     if (error.response?.status === 401) {
       localStorage.removeItem('token')
       localStorage.removeItem('user')
-      window.location.href = '/login'
+      // Don't redirect if already on login page
+      if (!window.location.pathname.includes('/login')) {
+        window.location.href = '/login'
+      }
     }
     
-    // Return a more user-friendly error
     const message = error.response?.data?.message || error.message || 'Something went wrong'
     return Promise.reject(new Error(message))
   }
